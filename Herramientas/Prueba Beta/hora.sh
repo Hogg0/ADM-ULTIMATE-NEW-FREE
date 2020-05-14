@@ -24,8 +24,8 @@ sleep 1s
 }
 
 act_hora () {
-echo "America/Chihuahua" > /etc/timezone
-ln -fs /usr/share/zoneinfo/America/Chihuahua /etc/localtime > /dev/null 2>&1
+echo "America/Argentina" > /etc/timezone
+ln -fs /usr/share/zoneinfo/America/Argentina /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1 && echo -e "\033[1;32m [OK]" || echo -e "\033[1;31m [FAIL]"
 echo -e "$barra"
 menu
@@ -51,7 +51,7 @@ shadowe_fun () {
 echo -e " \033[1;36m $(fun_trans "ZONA HORARIO")"
 echo -e "$barra"
 while true; do
-echo -e "${cor[4]} [1] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  CHICHUAHUA")"
+echo -e "${cor[4]} [1] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  Argentina")"
 echo -e "${cor[4]} [2] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  MEXICO")"
 echo -e "${cor[4]} [3] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  HERMOSILLO")"
 echo -e "${cor[4]} [4] > ${cor[0]}$(fun_trans "VOLVER")"
